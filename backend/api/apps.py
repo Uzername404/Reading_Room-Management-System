@@ -1,11 +1,9 @@
 from django.apps import AppConfig
-from django.db import connection
 
 class ApiConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'api'
 
+    # Removed database query from ready() to avoid accessing DB during app initialization
     def ready(self):
-        # Disable MySQL strict mode for the current session to avoid migration errors
-        with connection.cursor() as cursor:
-            cursor.execute("SET SESSION sql_mode=(SELECT REPLACE(@@sql_mode,'STRICT_TRANS_TABLES',''));")
+        pass

@@ -1,0 +1,495 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  
+  /* Outer Wrapper */
+  .resources-wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f6f6f6;
+  }
+  
+  /* Sidebar styles */
+  .sidebar {
+    width: 250px;
+    background-color: #647a50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  .user-section {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .avatar {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-weight: bold;
+  }
+  
+  .status {
+    font-size: 0.8rem;
+    color: lightgray;
+  }
+  
+  .nav-links {
+    margin-top: 20px;
+  }
+  
+  .nav-links h4 {
+    margin-top: 15px;
+    font-size: 0.9rem;
+  }
+  
+  .nav-links a {
+    display: block;
+    color: white;
+    margin: 6px 0;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  
+  .nav-links a.active {
+    font-weight: bold;
+    background-color: #849e6a;
+  }
+  
+  /* Main content styles */
+  .main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header section */
+  .header {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #333;
+    padding: 0;
+  }
+  
+  .breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 20px 0;
+  }
+  
+  h1 {
+    margin-bottom: 15px;
+    color: #647a50;
+
+  }
+  
+  .highlight {
+    color: #647a50;
+  }
+  
+  /* Resources List Container */
+  .resources-list {
+    background-color: #f9f9f9;
+    color: #647a50;
+    padding: 20px;
+    border-radius: 10px;
+    flex-grow: 1;
+  }
+  
+
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    color: #647a50;
+  }
+  
+  .table-header h3 {
+    font-size: 1.2rem;
+  }
+  
+  .table-header input {
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .table-header button {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #647a51;
+  }
+  
+  /* Table Styles */
+  .resource-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    color: #333;  
+  }
+  
+  .resource-table th,
+  .resource-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .resource-table thead {
+    background-color: #e0e0e0;
+  }
+  
+  .resource-table tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  /* Status styles */
+  .status-available {
+    color: #647a51;
+    font-weight: bold;
+  }
+  
+  .status-borrowed {
+    color: #FF8282;
+    font-weight: bold;
+  }
+  
+  /* Disable link */
+  a.disable {
+    color: #FF8282;
+  }
+  
+  /* Pagination */
+  .pagination {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #555;
+  }
+  
+  /* Footer styling */
+  footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: gray;
+  }
+  
+  .dashboard-summary {
+    display: flex;
+    padding: 20px;
+  }
+  .summary-box {
+    background: #e0e0e0;
+    color: #647a51;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px;
+    margin: 10px;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .main-content {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allow scroll if content grows */
+  }
+  
+  .summary-count {
+    font-size: medium;
+    font-style: italic; 
+
+  }
+
+  /* ------------------------------------------------------------------- */
+.resource-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+.resource-form label {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #647a50;
+  font-size: 0.95rem;
+}
+
+.resource-form input,
+.resource-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.form-actions button {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form-actions button[type="submit"] {
+  background-color: #647a51;
+  color: white;
+}
+
+.form-actions .cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+/* Modal Overlay */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #333;
+}
+
+.modal-content h2 {
+  margin-bottom: 10px;
+  color: #647a51;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Inputs and Select */
+.modal-content input,
+.modal-content select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* Buttons */
+.modal-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-content .save-user {
+  background-color: #647a51;
+  color: white;
+}
+
+.modal-content button:not(.save-user) {
+  background-color: #ccc;
+  color: #333;
+}
+
+.disable {
+  color: #FF8282;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ----------------------------------------------------------------- */
+/* Modal Overlay */
+/* Modal Overlay */
+.student-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Content Box */
+.student-modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: #333;
+}
+
+.student-modal-content h2 {
+  margin-bottom: 10px;
+  color: #647a51;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Student Form */
+.student-form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* Label styling */
+.student-form label {
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #647a50;
+  font-size: 0.95rem;
+}
+
+/* Input and Select styling */
+.student-form input,
+.student-form select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  font-size: 0.95rem;
+}
+
+/* Buttons for the form actions */
+.student-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.student-form-actions button {
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.student-form-actions .cancel-btn {
+  background-color: #ccc;
+  color: #333;
+}
+
+.student-form-actions .save-btn {
+  background-color: #647a51;
+  color: white;
+}
+
+.actionss {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  
+  
+  padding: 20px;   
+}
+
+.qr-modal {
+  text-align: center;
+  max-width: 300px;
+}
+
+.qr-code-container {
+  margin: 20px 0;
+  padding: 10px;
+  background: white;
+  display: inline-block;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 0;
+}
+
+.action-button:hover {
+  color: #004499;
+}
